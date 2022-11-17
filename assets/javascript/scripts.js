@@ -14,3 +14,12 @@ containerEl.addEventListener('click', clickHandler);
 // for (let i = 0; i < buttons.length; i++) {
 //   buttons[i].addEventListener('click', clickHandler());
 // }
+
+const isEven = (num) => {
+  if (num % 2 === 0) {
+    return true;
+  }
+  else {
+    return false;
+  }
+};
