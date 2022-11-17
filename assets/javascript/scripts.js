@@ -1,12 +1,16 @@
-const buttonEl = document.getElementById('my-button');
+// This adds listeners to all buttons in container
+const containerEl = document.getElementById('container');
 
-const clickHandler = function() {
-  let count = 0;
-
-  return function() {
-    count++;
-    this.textContent = `Clicks: ${count}`;
-  };
+const clickHandler = function(event) {
+  if (event.target.matches('button')) {
+    event.target.textContent = 'Clicked!';
+  }
 };
 
-buttonEl.addEventListener('click', clickHandler());
+containerEl.addEventListener('click', clickHandler);
+// This adds listeners to all buttons
+// const buttons = document.getElementsByTagName('button');
+
+// for (let i = 0; i < buttons.length; i++) {
+//   buttons[i].addEventListener('click', clickHandler());
+// }
